@@ -3,6 +3,7 @@
 Здесь я буду размещать список вопросов для собеседований
 
 * [Микросервисы](https://github.com/ivanov-kostya/interview/blob/master/microservices.md)
+* [Паттерны микросервисов](https://github.com/ivanov-kostya/interview/blob/master/microservices_patterns.md)
 * [Транзакции](https://github.com/ivanov-kostya/interview/blob/master/transactions.md)
 * [Индексы](https://github.com/ivanov-kostya/interview/blob/master/index.md)
 * [Репликации](https://github.com/ivanov-kostya/interview/blob/master/replication.md)
