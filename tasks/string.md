@@ -58,6 +58,9 @@ System.out.println(reverseStr);
 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 
+Если задано знаковое 32-битное целое число x, верните x с перевернутыми цифрами. Если при переворачивании x значение выходит за пределы диапазона знаковых 32-битных целых чисел [-231, 231 - 1], то верните 0.
+Предположим, что среда не позволяет хранить 64-битные целые числа (подписанные или беззнаковые).
+
 ### Решение
 
 package com.ki.tasks;
@@ -101,6 +104,8 @@ int x3 = 120;
 ## First Unique Character in a String
 
 Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
+
+Задав строку s, найдите в ней первый неповторяющийся символ и верните его индекс. Если он не существует, верните -1.
 
 Example 1:
 
@@ -163,6 +168,9 @@ public class FirstUniqueCharacterString {
 
 ## Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
+## Если даны две строки s и t, верните true, если t является анаграммой s, и false в противном случае.
+
+
 Example 1:
 
 Input: s = "anagram", t = "nagaram"
@@ -192,9 +200,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Anagram {
-public static void main(String[] args) {
-String str1 = "anagram";
-String str2 = "2nagaram";
+    public static void main(String[] args) {
+        String str1 = "anagram";
+        String str2 = "2nagaram";
 
         System.out.println(str1 + " is anagram for " + str2 + ": " + isAnagram2(str1, str2));
     }
@@ -240,6 +248,8 @@ String str2 = "2nagaram";
 
 Given a string s, return true if it is a palindrome, or false otherwise.
 
+Если задана строка s, верните true, если она является палиндромом, или false в противном случае.
+
 Example 1:
 
 Input: s = "A man, a plan, a canal: Panama"
@@ -268,11 +278,11 @@ s consists only of printable ASCII characters.
 package com.ki.tasks;
 
 public class Palindrom {
-public static void main(String[] args) {
-String s = "A man, a plan, a canal: Panama";
-System.out.println("Palindrom1 " + isPalindrom(s));
-System.out.println("Palindrom2 " + isPalindrom2(s));
-}
+    public static void main(String[] args) {
+        String s = "A man, a plan, a canal: Panama";
+        System.out.println("Palindrom1 " + isPalindrom(s));
+        System.out.println("Palindrom2 " + isPalindrom2(s));
+    }
 
     private static boolean isPalindrom(String s) {
         StringBuilder cleaned = new StringBuilder();
@@ -311,6 +321,7 @@ System.out.println("Palindrom2 " + isPalindrom2(s));
 
 ## Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
+## Если даны две строки needle и haystack, верните индекс первого вхождения needle в haystack, или -1, если needle не является частью haystack.
 
 
 Example 1:
@@ -376,6 +387,16 @@ Conversion: Read the integer by skipping leading zeros until a non-digit charact
 Rounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.
 Return the integer as the final result.
 
+Реализуйте функцию myAtoi(string s), которая преобразует строку в 32-битное знаковое целое число.
+
+Алгоритм myAtoi(string s) выглядит следующим образом:
+
+Пробельные символы: Игнорировать ведущие пробельные символы (» »).
+Знаковость: Определяем знак, проверяя, является ли следующий символ '-' или '+', предполагая, что ни один из них не является положительным.
+Преобразование: Считайте целое число, пропуская ведущие нули, пока не встретится нецифровой символ или не будет достигнут конец строки. Если ни одна цифра не была считана, то результатом будет 0.
+Округление: Если целое число выходит за пределы диапазона 32-битных знаковых целых чисел [-231, 231 - 1], то округлите его, чтобы оно осталось в этом диапазоне. В частности, целые числа меньше -231 должны быть округлены до -231, а целые числа больше 231 - 1 должны быть округлены до 231 - 1.
+В качестве конечного результата верните целое число.
+
 ### Решение
 
 package com.ki.tasks;
@@ -422,7 +443,9 @@ Write a function to find the longest common prefix string amongst an array of st
 
 If there is no common prefix, return an empty string "".
 
+Напишите функцию для поиска самой длинной строки с общим префиксом среди массива строк.
 
+Если общего префикса нет, верните пустую строку «».
 
 Example 1:
 
@@ -473,140 +496,3 @@ System.out.println(prefixStr(strs2));
         return prefix;
     }
 }
-
----------
-
-## Remove Duplicates from Sorted Array
-
-Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
-
-Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
-
-Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
-Return k.
-Custom Judge:
-
-The judge will test your solution with the following code:
-
-int[] nums = [...]; // Input array
-int[] expectedNums = [...]; // The expected answer with correct length
-
-int k = removeDuplicates(nums); // Calls your implementation
-
-assert k == expectedNums.length;
-for (int i = 0; i < k; i++) {
-assert nums[i] == expectedNums[i];
-}
-If all assertions pass, then your solution will be accepted.
-
-
-
-Example 1:
-
-Input: nums = [1,1,2]
-Output: 2, nums = [1,2,_]
-Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
-Example 2:
-
-Input: nums = [0,0,1,1,1,2,2,3,3,4]
-Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
-Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
-
-
-Constraints:
-
-1 <= nums.length <= 3 * 104
--100 <= nums[i] <= 100
-nums is sorted in non-decreasing order.
-
-### Решение
-
-package com.ki.tasks.array;
-
-import java.util.Arrays;
-import java.util.HashSet;
-
-public class RemoveDuplicatesFromSortedArray {
-public static void main(String[] args) {
-int[] nums1 = {1, 1, 2, 2, 3, 4};
-int[] nums2 = {0, 0, 1, 1, 1, 2, 3, 3, 4, 4, 4, 4, 5};
-System.out.println(removeDuplicates(nums1));
-System.out.println("=============");
-System.out.println(removeDuplicatesHashSet(nums1));
-System.out.println(removeDuplicatesHashSet(nums2));
-}
-
-    private static int removeDuplicatesHashSet(int[] nums) {
-        if (nums.length == 0) return 0;
-
-        HashSet<Integer> hashSet = new HashSet<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            hashSet.add(nums[i]);
-        }
-
-        return hashSet.size();
-    }
-
-    private static int removeDuplicates(int[] nums) {
-        if (nums.length == 0) return 0;
-
-        int j = 0;
-
-        for (int i = 1; i < nums.length; i++) {
-            System.out.println(Arrays.toString(nums));
-            if (nums[j] != nums[i]) {
-                j++;
-                nums[j] = nums[i];
-            }
-            System.out.println("j = " + j);
-        }
-
-        return j + 1;
-    }
-}
-
-### Пояснение:
-
-* Если массив пустой, сразу возвращаем 0.
-* Используем два указателя: i для отслеживания уникальных элементов и j для прохода по массиву.
-* Каждый раз, когда находим новый уникальный элемент (nums[j] != nums[i]), увеличиваем i и обновляем nums[i] текущим элементом nums[j].
-* По завершении цикла, значение i + 1 будет количеством уникальных элементов в массиве.
-
-## Best Time to Buy and Sell Stock II
-
-You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
-
-On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
-
-Find and return the maximum profit you can achieve.
-
-Example 1:
-
-Input: prices = [7,1,5,3,6,4]
-Output: 7
-Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
-Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
-Total profit is 4 + 3 = 7.
-Example 2:
-
-Input: prices = [1,2,3,4,5]
-Output: 4
-Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
-Total profit is 4.
-Example 3:
-
-Input: prices = [7,6,4,3,1]
-Output: 0
-Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
-
-
-Constraints:
-
-1 <= prices.length <= 3 * 104
-0 <= prices[i] <= 104
-
-### Решение
-
