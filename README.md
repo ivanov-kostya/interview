@@ -49,8 +49,11 @@
 * [Apache Kafka](https://github.com/ivanov-kostya/interview/blob/master/kafka.md)
 
 ## Алгоритмы и структуры данных
-* [alg](https://github.com/ivanov-kostya/interview/blob/master/alg.md)
+* [Алгоритмы и структуры данных](https://github.com/ivanov-kostya/interview/blob/master/alg.md)
 
 ## Задачи из Leetcode
 * [String](https://github.com/ivanov-kostya/interview/blob/master/tasks/string.md)
 * [Array](https://github.com/ivanov-kostya/interview/blob/master/tasks/arr.md)
+
+## System design
+* [System design](https://github.com/ivanov-kostya/interview/blob/master/system_design.md)
