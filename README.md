@@ -54,6 +54,19 @@
 ## Задачи из Leetcode
 * [String](https://github.com/ivanov-kostya/interview/blob/master/tasks/string.md)
 * [Array](https://github.com/ivanov-kostya/interview/blob/master/tasks/arr.md)
+* [Linked List](https://github.com/ivanov-kostya/interview/blob/master/tasks/linked_list.md)
+
+## Задачи на Output
+* [ООП](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/1_oop.md)
+* [Классы](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/2_classes.md)
+* [Коллекции](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/3_collections.md)
+* [Generics](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/4_generics.md)
+* [Многопоточность](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/5_threads.md)
+* [Исключения](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/6_exception.md)
+* [IO](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/7_io.md)
+* [Stream lambda](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/8_stream_lambda.md)
+* [Строки](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/9_string.md)
+* [Spring](https://github.com/ivanov-kostya/interview/blob/master/tasks/output/10_spring.md)
 
 ## System design
 * [System design](https://github.com/ivanov-kostya/interview/blob/master/system_design.md)

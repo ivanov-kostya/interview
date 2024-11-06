@@ -71,14 +71,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class RemoveDuplicatesFromSortedArray {
-public static void main(String[] args) {
-int[] nums1 = {1, 1, 2, 2, 3, 4};
-int[] nums2 = {0, 0, 1, 1, 1, 2, 3, 3, 4, 4, 4, 4, 5};
-System.out.println(removeDuplicates(nums1));
-System.out.println("=============");
-System.out.println(removeDuplicatesHashSet(nums1));
-System.out.println(removeDuplicatesHashSet(nums2));
-}
+    public static void main(String[] args) {
+        int[] nums1 = {1, 1, 2, 2, 3, 4};
+        int[] nums2 = {0, 0, 1, 1, 1, 2, 3, 3, 4, 4, 4, 4, 5};
+        System.out.println(removeDuplicates(nums1));
+        System.out.println("=============");
+        System.out.println(removeDuplicatesHashSet(nums1));
+        System.out.println(removeDuplicatesHashSet(nums2));
+    }
 
     private static int removeDuplicatesHashSet(int[] nums) {
         if (nums.length == 0) return 0;
